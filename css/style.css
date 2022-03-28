@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+html {
+  font-size: 1rem;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+p, span {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 2200px;
+  width: 100%;
+}
+
+.keyvisual {
+  height: 110vh;
+  background-color: #a3a3a3;
+}
+
+#header {
+  width: 100%;
+}
+
+.inner {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-title {
+  padding: 15px 0;
+}
+
+.language-wrapper {
+  padding: 15px 0;
+}
+.language-wrapper p a {
+  display: inline-block;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.language-wrapper {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.company {
+  text-align: center;
+}
+.company a {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.company-title {
+  font-weight: bold;
+}
+
+.menu {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.menu-btn,.menu-btn::before,.menu-btn::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+}
+
+.menu-btn::before {
+  bottom: 10px;
+}
+
+.menu-btn {
+  top: 25px;
+  left: 10px;
+}
+
+.menu-btn::after {
+  top: 10px;
+}
+
+#header.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #f0e68c;
+}
+
+main {
+  height: 110vh;
+  background-color: #a3a3a3;
+}
