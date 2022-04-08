@@ -1,12 +1,13 @@
 const mainHeader = document.getElementById('header');
 // ヘッダーを取得する
+const keyvisualHeight = document.getElementById('keyvisual').clientHeight;
 
 window.addEventListener('scroll', function(){
   const scrollPosition = document.documentElement.scrollTop;
   // スクロールされるピクセル数を取得する
 
-  if (scrollPosition > 1007) {
-    // 1007ピクセルスクロールすると画面上部にメニューがくるため、1007ピクセル以上スクロールした場合という条件にする
+  if (scrollPosition > keyvisualHeight) {
+    // keyvisualの高さ分スクロールした場合という条件にする
 
     mainHeader.classList.add('is-fixed');
     // #headerにis-foxedクラスをつける
