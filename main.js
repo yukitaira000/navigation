@@ -1,18 +1,16 @@
+
+
 const mainHeader = document.getElementById('header');
-// ヘッダーを取得する
+const rect = mainHeader.getBoundingClientRect();/* ブラウザの表示領域の相対位置を取得 */
+const scrollTop = window.pageYOffset; /*ブラウザ上端を基準とした縦方向のページスクロール量を取得 */
+const headerPosition = rect.top + scrollTop; /*headerの位置の絶対位置 */
+
 
 window.addEventListener('scroll', function(){
-  const scrollPosition = document.documentElement.scrollTop;
-  // スクロールされるピクセル数を取得する
-
-  if (scrollPosition > 1007) {
-    // 1007ピクセルスクロールすると画面上部にメニューがくるため、1007ピクセル以上スクロールした場合という条件にする
-
+  var scrollTop = document.documentElement.scrollTop;
+  if(scrollTop > headerPosition){
     mainHeader.classList.add('is-fixed');
-    // #headerにis-foxedクラスをつける
-
   } else {
     mainHeader.classList.remove('is-fixed');
-    // そうではない場合、is-fixedクラスを外す
   }
 })
